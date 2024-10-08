@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Listings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  />
+  <!-- Link to CSS file -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Main Content -->
+    <main>
+      <!-- Filters -->
+      <section class="filters">
+        <select id="locationFilter">
+          <option value="">All Locations</option>
+        </select>
+
+        <select id="sortFilter">
+          <option value="">Sort By</option>
+          <option value="price-asc">Price (Low to High)</option>
+          <option value="price-desc">Price (High to Low)</option>
+          <option value="date-asc">Date (Earliest First)</option>
+          <option value="date-desc">Date (Latest First)</option>
+        </select>
+
+        <input type="number" id="maxPriceFilter" placeholder="Max Price">
+      </section>
+
+      <!-- Event Grid -->
+      <section id="eventContainer" class="event-grid"></section>
+    </main>
+
+    <!-- Sidebar for Favorites -->
+    <aside id="favoritesSidebar">
+      <h2>Favorites</h2>
+      <ul id="favoritesList"></ul>
+    </aside>
+  </div>
+
+  <!-- Add a link to the cart page -->
+  <a href="cart.html" id="cartLink">
+    <i class="fa-solid fa-shopping-cart"></i> Cart (<span id="cartCount">0</span>)
+  </a>
+
+  <!-- Link to JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
